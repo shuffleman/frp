@@ -393,3 +393,14 @@ func (svr *Service) GetProxyStatus(name string) (*proxy.WorkingStatus, error) {
 	}
 	return ws, nil
 }
+
+func (svr *Service) GetAllProxyStatus(name string) []*proxy.WorkingStatus {
+	svr.ctlMu.RLock()
+	ctl := svr.ctl
+	svr.ctlMu.RUnlock()
+
+	if ctl == nil {
+		return nil
+	}
+	return ctl.pm.GetAllProxyStatus()
+}
