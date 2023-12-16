@@ -8,10 +8,10 @@ import (
 
 	"github.com/onsi/ginkgo/v2"
 
-	clientsdk "github.com/shuffleman/frp/pkg/sdk/client"
-	"github.com/shuffleman/frp/test/e2e/framework"
-	"github.com/shuffleman/frp/test/e2e/framework/consts"
-	"github.com/shuffleman/frp/test/e2e/pkg/request"
+	clientsdk "github.com/fatedier/frp/pkg/sdk/client"
+	"github.com/fatedier/frp/test/e2e/framework"
+	"github.com/fatedier/frp/test/e2e/framework/consts"
+	"github.com/fatedier/frp/test/e2e/pkg/request"
 )
 
 var _ = ginkgo.Describe("[Feature: ClientManage]", func() {

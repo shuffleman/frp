@@ -17,7 +17,7 @@ package log
 import (
 	"fmt"
 
-	"github.com/shuffleman/beego/logs"
+	"github.com/fatedier/beego/logs"
 )
 
 // Log is the under log object

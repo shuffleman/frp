@@ -19,9 +19,9 @@ import (
 	"strconv"
 	"sync"
 
-	gerr "github.com/shuffleman/golib/errors"
+	gerr "github.com/fatedier/golib/errors"
 
-	"github.com/shuffleman/frp/server/ports"
+	"github.com/fatedier/frp/server/ports"
 )
 
 // TCPGroupCtl manage all TCPGroups

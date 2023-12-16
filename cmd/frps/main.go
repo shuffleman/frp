@@ -15,10 +15,10 @@
 package main
 
 import (
-	"github.com/shuffleman/golib/crypto"
+	"github.com/fatedier/golib/crypto"
 
-	_ "github.com/shuffleman/frp/assets/frps"
-	_ "github.com/shuffleman/frp/pkg/metrics"
+	_ "github.com/fatedier/frp/assets/frps"
+	_ "github.com/fatedier/frp/pkg/metrics"
 )
 
 func main() {

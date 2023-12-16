@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/shuffleman/frp/pkg/util/util"
-	"github.com/shuffleman/frp/pkg/util/xlog"
+	"github.com/fatedier/frp/pkg/util/util"
+	"github.com/fatedier/frp/pkg/util/xlog"
 )
 
 type Manager struct {

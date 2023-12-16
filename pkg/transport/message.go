@@ -19,9 +19,9 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/shuffleman/golib/errors"
+	"github.com/fatedier/golib/errors"
 
-	"github.com/shuffleman/frp/pkg/msg"
+	"github.com/fatedier/frp/pkg/msg"
 )
 
 type MessageTransporter interface {

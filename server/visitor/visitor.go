@@ -20,11 +20,11 @@ import (
 	"net"
 	"sync"
 
+	libio "github.com/fatedier/golib/io"
 	"github.com/samber/lo"
-	libio "github.com/shuffleman/golib/io"
 
-	netpkg "github.com/shuffleman/frp/pkg/util/net"
-	"github.com/shuffleman/frp/pkg/util/util"
+	netpkg "github.com/fatedier/frp/pkg/util/net"
+	"github.com/fatedier/frp/pkg/util/util"
 )
 
 type listenerBundle struct {

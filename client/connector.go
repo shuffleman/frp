@@ -24,15 +24,15 @@ import (
 	"sync"
 	"time"
 
+	libdial "github.com/fatedier/golib/net/dial"
 	fmux "github.com/hashicorp/yamux"
 	quic "github.com/quic-go/quic-go"
 	"github.com/samber/lo"
-	libdial "github.com/shuffleman/golib/net/dial"
 
-	v1 "github.com/shuffleman/frp/pkg/config/v1"
-	"github.com/shuffleman/frp/pkg/transport"
-	netpkg "github.com/shuffleman/frp/pkg/util/net"
-	"github.com/shuffleman/frp/pkg/util/xlog"
+	v1 "github.com/fatedier/frp/pkg/config/v1"
+	"github.com/fatedier/frp/pkg/transport"
+	netpkg "github.com/fatedier/frp/pkg/util/net"
+	"github.com/fatedier/frp/pkg/util/xlog"
 )
 
 // Connector is a interface for establishing connections to the server.

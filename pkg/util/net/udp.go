@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/shuffleman/golib/pool"
+	"github.com/fatedier/golib/pool"
 )
 
 type UDPPacket struct {

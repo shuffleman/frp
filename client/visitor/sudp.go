@@ -22,15 +22,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/shuffleman/golib/errors"
-	libio "github.com/shuffleman/golib/io"
+	"github.com/fatedier/golib/errors"
+	libio "github.com/fatedier/golib/io"
 
-	v1 "github.com/shuffleman/frp/pkg/config/v1"
-	"github.com/shuffleman/frp/pkg/msg"
-	"github.com/shuffleman/frp/pkg/proto/udp"
-	netpkg "github.com/shuffleman/frp/pkg/util/net"
-	"github.com/shuffleman/frp/pkg/util/util"
-	"github.com/shuffleman/frp/pkg/util/xlog"
+	v1 "github.com/fatedier/frp/pkg/config/v1"
+	"github.com/fatedier/frp/pkg/msg"
+	"github.com/fatedier/frp/pkg/proto/udp"
+	netpkg "github.com/fatedier/frp/pkg/util/net"
+	"github.com/fatedier/frp/pkg/util/util"
+	"github.com/fatedier/frp/pkg/util/xlog"
 )
 
 type SUDPVisitor struct {

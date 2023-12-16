@@ -19,11 +19,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shuffleman/golib/errors"
+	"github.com/fatedier/golib/errors"
 
-	"github.com/shuffleman/frp/pkg/util/log"
-	netpkg "github.com/shuffleman/frp/pkg/util/net"
-	"github.com/shuffleman/frp/pkg/util/xlog"
+	"github.com/fatedier/frp/pkg/util/log"
+	netpkg "github.com/fatedier/frp/pkg/util/net"
+	"github.com/fatedier/frp/pkg/util/xlog"
 )
 
 type RouteInfo string

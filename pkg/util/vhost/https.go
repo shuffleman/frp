@@ -20,7 +20,7 @@ import (
 	"net"
 	"time"
 
-	libnet "github.com/shuffleman/golib/net"
+	libnet "github.com/fatedier/golib/net"
 )
 
 type HTTPSMuxer struct {

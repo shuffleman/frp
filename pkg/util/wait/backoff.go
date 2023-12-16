@@ -20,7 +20,7 @@ import (
 
 	"github.com/samber/lo"
 
-	"github.com/shuffleman/frp/pkg/util/util"
+	"github.com/fatedier/frp/pkg/util/util"
 )
 
 type BackoffFunc func(previousDuration time.Duration, previousConditionError bool) time.Duration

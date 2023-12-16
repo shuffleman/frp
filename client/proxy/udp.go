@@ -23,14 +23,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/shuffleman/golib/errors"
-	libio "github.com/shuffleman/golib/io"
+	"github.com/fatedier/golib/errors"
+	libio "github.com/fatedier/golib/io"
 
-	v1 "github.com/shuffleman/frp/pkg/config/v1"
-	"github.com/shuffleman/frp/pkg/msg"
-	"github.com/shuffleman/frp/pkg/proto/udp"
-	"github.com/shuffleman/frp/pkg/util/limit"
-	netpkg "github.com/shuffleman/frp/pkg/util/net"
+	v1 "github.com/fatedier/frp/pkg/config/v1"
+	"github.com/fatedier/frp/pkg/msg"
+	"github.com/fatedier/frp/pkg/proto/udp"
+	"github.com/fatedier/frp/pkg/util/limit"
+	netpkg "github.com/fatedier/frp/pkg/util/net"
 )
 
 func init() {

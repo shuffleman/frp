@@ -28,12 +28,12 @@ import (
 
 	"github.com/samber/lo"
 
-	"github.com/shuffleman/frp/client/proxy"
-	"github.com/shuffleman/frp/pkg/config"
-	"github.com/shuffleman/frp/pkg/config/v1/validation"
-	httppkg "github.com/shuffleman/frp/pkg/util/http"
-	"github.com/shuffleman/frp/pkg/util/log"
-	netpkg "github.com/shuffleman/frp/pkg/util/net"
+	"github.com/fatedier/frp/client/proxy"
+	"github.com/fatedier/frp/pkg/config"
+	"github.com/fatedier/frp/pkg/config/v1/validation"
+	httppkg "github.com/fatedier/frp/pkg/util/http"
+	"github.com/fatedier/frp/pkg/util/log"
+	netpkg "github.com/fatedier/frp/pkg/util/net"
 )
 
 type GeneralResponse struct {

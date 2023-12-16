@@ -20,10 +20,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/shuffleman/golib/errors"
-	"github.com/shuffleman/golib/pool"
+	"github.com/fatedier/golib/errors"
+	"github.com/fatedier/golib/pool"
 
-	"github.com/shuffleman/frp/pkg/msg"
+	"github.com/fatedier/frp/pkg/msg"
 )
 
 func NewUDPPacket(buf []byte, laddr, raddr *net.UDPAddr) *msg.UDPPacket {

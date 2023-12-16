@@ -11,9 +11,9 @@ import (
 
 	"github.com/onsi/ginkgo/v2"
 
-	"github.com/shuffleman/frp/test/e2e/mock/server"
-	"github.com/shuffleman/frp/test/e2e/pkg/port"
-	"github.com/shuffleman/frp/test/e2e/pkg/process"
+	"github.com/fatedier/frp/test/e2e/mock/server"
+	"github.com/fatedier/frp/test/e2e/pkg/port"
+	"github.com/fatedier/frp/test/e2e/pkg/process"
 )
 
 type Options struct {

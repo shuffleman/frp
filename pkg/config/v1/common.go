@@ -17,7 +17,7 @@ package v1
 import (
 	"sync"
 
-	"github.com/shuffleman/frp/pkg/util/util"
+	"github.com/fatedier/frp/pkg/util/util"
 )
 
 // TODO(fatedier): Due to the current implementation issue of the go json library, the UnmarshalJSON method

@@ -6,8 +6,8 @@ import (
 	"github.com/onsi/ginkgo/v2"
 	"github.com/onsi/gomega"
 
-	"github.com/shuffleman/frp/pkg/util/log"
-	"github.com/shuffleman/frp/test/e2e/framework"
+	"github.com/fatedier/frp/pkg/util/log"
+	"github.com/fatedier/frp/test/e2e/framework"
 )
 
 var _ = ginkgo.SynchronizedBeforeSuite(func() []byte {

@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shuffleman/frp/pkg/util/util"
+	"github.com/fatedier/frp/pkg/util/util"
 )
 
 type HTTPAuthWrapper struct {

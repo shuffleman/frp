@@ -18,10 +18,10 @@ import (
 	"context"
 	"net"
 
-	"github.com/shuffleman/frp/client"
-	v1 "github.com/shuffleman/frp/pkg/config/v1"
-	"github.com/shuffleman/frp/pkg/msg"
-	netpkg "github.com/shuffleman/frp/pkg/util/net"
+	"github.com/fatedier/frp/client"
+	v1 "github.com/fatedier/frp/pkg/config/v1"
+	"github.com/fatedier/frp/pkg/msg"
+	netpkg "github.com/fatedier/frp/pkg/util/net"
 )
 
 type ClientOptions struct {

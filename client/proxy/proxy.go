@@ -24,18 +24,18 @@ import (
 	"sync"
 	"time"
 
+	libio "github.com/fatedier/golib/io"
+	libdial "github.com/fatedier/golib/net/dial"
 	pp "github.com/pires/go-proxyproto"
-	libio "github.com/shuffleman/golib/io"
-	libdial "github.com/shuffleman/golib/net/dial"
 	"golang.org/x/time/rate"
 
-	"github.com/shuffleman/frp/pkg/config/types"
-	v1 "github.com/shuffleman/frp/pkg/config/v1"
-	"github.com/shuffleman/frp/pkg/msg"
-	plugin "github.com/shuffleman/frp/pkg/plugin/client"
-	"github.com/shuffleman/frp/pkg/transport"
-	"github.com/shuffleman/frp/pkg/util/limit"
-	"github.com/shuffleman/frp/pkg/util/xlog"
+	"github.com/fatedier/frp/pkg/config/types"
+	v1 "github.com/fatedier/frp/pkg/config/v1"
+	"github.com/fatedier/frp/pkg/msg"
+	plugin "github.com/fatedier/frp/pkg/plugin/client"
+	"github.com/fatedier/frp/pkg/transport"
+	"github.com/fatedier/frp/pkg/util/limit"
+	"github.com/fatedier/frp/pkg/util/xlog"
 )
 
 var proxyFactoryRegistry = map[reflect.Type]func(*BaseProxy, v1.ProxyConfigurer) Proxy{}

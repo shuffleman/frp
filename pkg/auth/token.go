@@ -20,9 +20,9 @@ import (
 
 	"github.com/samber/lo"
 
-	v1 "github.com/shuffleman/frp/pkg/config/v1"
-	"github.com/shuffleman/frp/pkg/msg"
-	"github.com/shuffleman/frp/pkg/util/util"
+	v1 "github.com/fatedier/frp/pkg/config/v1"
+	"github.com/fatedier/frp/pkg/msg"
+	"github.com/fatedier/frp/pkg/util/util"
 )
 
 type TokenAuthSetterVerifier struct {

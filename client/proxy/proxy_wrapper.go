@@ -23,14 +23,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/shuffleman/golib/errors"
+	"github.com/fatedier/golib/errors"
 
-	"github.com/shuffleman/frp/client/event"
-	"github.com/shuffleman/frp/client/health"
-	v1 "github.com/shuffleman/frp/pkg/config/v1"
-	"github.com/shuffleman/frp/pkg/msg"
-	"github.com/shuffleman/frp/pkg/transport"
-	"github.com/shuffleman/frp/pkg/util/xlog"
+	"github.com/fatedier/frp/client/event"
+	"github.com/fatedier/frp/client/health"
+	v1 "github.com/fatedier/frp/pkg/config/v1"
+	"github.com/fatedier/frp/pkg/msg"
+	"github.com/fatedier/frp/pkg/transport"
+	"github.com/fatedier/frp/pkg/util/xlog"
 )
 
 const (
