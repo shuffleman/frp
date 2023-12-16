@@ -67,7 +67,7 @@ const toggleDark = useToggle(isDark)
 
 const handleSelect = (key: string) => {
   if (key == '') {
-    window.open('https://github.com/fatedier/frp')
+    window.open('https://github.com/shuffleman/frp')
   }
 }
 </script>

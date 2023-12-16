@@ -23,19 +23,19 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fatedier/golib/crypto"
 	"github.com/samber/lo"
+	"github.com/shuffleman/golib/crypto"
 
-	"github.com/fatedier/frp/client/proxy"
-	"github.com/fatedier/frp/pkg/auth"
-	v1 "github.com/fatedier/frp/pkg/config/v1"
-	"github.com/fatedier/frp/pkg/msg"
-	httppkg "github.com/fatedier/frp/pkg/util/http"
-	"github.com/fatedier/frp/pkg/util/log"
-	netpkg "github.com/fatedier/frp/pkg/util/net"
-	"github.com/fatedier/frp/pkg/util/version"
-	"github.com/fatedier/frp/pkg/util/wait"
-	"github.com/fatedier/frp/pkg/util/xlog"
+	"github.com/shuffleman/frp/client/proxy"
+	"github.com/shuffleman/frp/pkg/auth"
+	v1 "github.com/shuffleman/frp/pkg/config/v1"
+	"github.com/shuffleman/frp/pkg/msg"
+	httppkg "github.com/shuffleman/frp/pkg/util/http"
+	"github.com/shuffleman/frp/pkg/util/log"
+	netpkg "github.com/shuffleman/frp/pkg/util/net"
+	"github.com/shuffleman/frp/pkg/util/version"
+	"github.com/shuffleman/frp/pkg/util/wait"
+	"github.com/shuffleman/frp/pkg/util/xlog"
 )
 
 func init() {

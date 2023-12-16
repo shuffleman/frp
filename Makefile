@@ -20,7 +20,7 @@ fmt-more:
 	gofumpt -l -w .
 
 gci:
-	gci write -s standard -s default -s "prefix(github.com/fatedier/frp/)" ./
+	gci write -s standard -s default -s "prefix(github.com/shuffleman/frp/)" ./
 
 vet:
 	go vet ./...

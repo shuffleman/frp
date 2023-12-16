@@ -22,10 +22,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/fatedier/golib/crypto"
 	quic "github.com/quic-go/quic-go"
+	"github.com/shuffleman/golib/crypto"
 
-	"github.com/fatedier/frp/pkg/util/xlog"
+	"github.com/shuffleman/frp/pkg/util/xlog"
 )
 
 type ContextGetter interface {

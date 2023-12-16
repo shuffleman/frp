@@ -21,13 +21,13 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/fatedier/frp/pkg/config/types"
-	v1 "github.com/fatedier/frp/pkg/config/v1"
-	"github.com/fatedier/frp/pkg/metrics/mem"
-	httppkg "github.com/fatedier/frp/pkg/util/http"
-	"github.com/fatedier/frp/pkg/util/log"
-	netpkg "github.com/fatedier/frp/pkg/util/net"
-	"github.com/fatedier/frp/pkg/util/version"
+	"github.com/shuffleman/frp/pkg/config/types"
+	v1 "github.com/shuffleman/frp/pkg/config/v1"
+	"github.com/shuffleman/frp/pkg/metrics/mem"
+	httppkg "github.com/shuffleman/frp/pkg/util/http"
+	"github.com/shuffleman/frp/pkg/util/log"
+	netpkg "github.com/shuffleman/frp/pkg/util/net"
+	"github.com/shuffleman/frp/pkg/util/version"
 )
 
 // TODO(fatedier): add an API to clean status of all offline proxies.

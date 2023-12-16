@@ -19,7 +19,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/fatedier/golib/errors"
+	"github.com/shuffleman/golib/errors"
 )
 
 // InternalListener is a listener that can be used to accept connections from

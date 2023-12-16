@@ -21,9 +21,9 @@ import (
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"
 
-	"github.com/fatedier/frp/pkg/config"
-	v1 "github.com/fatedier/frp/pkg/config/v1"
-	"github.com/fatedier/frp/pkg/config/v1/validation"
+	"github.com/shuffleman/frp/pkg/config"
+	v1 "github.com/shuffleman/frp/pkg/config/v1"
+	"github.com/shuffleman/frp/pkg/config/v1/validation"
 )
 
 var proxyTypes = []v1.ProxyType{
