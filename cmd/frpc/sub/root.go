@@ -160,6 +160,6 @@ func startService(
 	if shouldGracefulClose {
 		go handleTermSignal(svr)
 	}
-	err = svr.Run(context.Background())
-	return svr, err
+	go svr.Run(context.Background())
+	return svr, nil
 }
