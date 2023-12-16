@@ -66,7 +66,7 @@ var rootCmd = &cobra.Command{
 		}
 
 		// Do not show command usage here.
-		err := runClient(cfgFile)
+		_, err := RunClient(cfgFile)
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)
@@ -85,7 +85,7 @@ func runMultipleClients(cfgDir string) error {
 		time.Sleep(time.Millisecond)
 		go func() {
 			defer wg.Done()
-			err := runClient(path)
+			_, err := RunClient(path)
 			if err != nil {
 				fmt.Printf("frpc service error for config file [%s]\n", path)
 			}
@@ -102,6 +102,10 @@ func Execute() {
 	}
 }
 
+func ExecuteClient() {
+
+}
+
 func handleTermSignal(svr *client.Service) {
 	ch := make(chan os.Signal, 1)
 	signal.Notify(ch, syscall.SIGINT, syscall.SIGTERM)
@@ -109,10 +113,10 @@ func handleTermSignal(svr *client.Service) {
 	svr.GracefulClose(500 * time.Millisecond)
 }
 
-func runClient(cfgFilePath string) error {
+func RunClient(cfgFilePath string) (*client.Service, error) {
 	cfg, proxyCfgs, visitorCfgs, isLegacyFormat, err := config.LoadClientConfig(cfgFilePath, strictConfigMode)
 	if err != nil {
-		return err
+		return nil, err
 	}
 	if isLegacyFormat {
 		fmt.Printf("WARNING: ini format is deprecated and the support will be removed in the future, " +
@@ -124,7 +128,7 @@ func runClient(cfgFilePath string) error {
 		fmt.Printf("WARNING: %v\n", warning)
 	}
 	if err != nil {
-		return err
+		return nil, err
 	}
 	return startService(cfg, proxyCfgs, visitorCfgs, cfgFilePath)
 }
@@ -134,7 +138,7 @@ func startService(
 	proxyCfgs []v1.ProxyConfigurer,
 	visitorCfgs []v1.VisitorConfigurer,
 	cfgFile string,
-) error {
+) (*client.Service, error) {
 	log.InitLog(cfg.Log.To, cfg.Log.Level, cfg.Log.MaxDays, cfg.Log.DisablePrintColor)
 
 	if cfgFile != "" {
@@ -148,7 +152,7 @@ func startService(
 		ConfigFilePath: cfgFile,
 	})
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	shouldGracefulClose := cfg.Transport.Protocol == "kcp" || cfg.Transport.Protocol == "quic"
@@ -156,5 +160,6 @@ func startService(
 	if shouldGracefulClose {
 		go handleTermSignal(svr)
 	}
-	return svr.Run(context.Background())
+	err = svr.Run(context.Background())
+	return svr, err
 }
