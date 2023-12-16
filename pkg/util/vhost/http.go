@@ -31,8 +31,8 @@ import (
 	libio "github.com/fatedier/golib/io"
 	"github.com/fatedier/golib/pool"
 
-	httppkg "github.com/fatedier/frp/pkg/util/http"
-	logpkg "github.com/fatedier/frp/pkg/util/log"
+	httppkg "github.com/shuffleman/frp/pkg/util/http"
+	logpkg "github.com/shuffleman/frp/pkg/util/log"
 )
 
 var ErrNoRouteFound = errors.New("no route found")

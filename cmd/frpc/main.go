@@ -15,8 +15,8 @@
 package main
 
 import (
-	_ "github.com/fatedier/frp/assets/frpc"
-	"github.com/fatedier/frp/cmd/frpc/sub"
+	_ "github.com/shuffleman/frp/assets/frpc"
+	"github.com/shuffleman/frp/cmd/frpc/sub"
 )
 
 func main() {

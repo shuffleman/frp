@@ -21,9 +21,9 @@ import (
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"
 
-	"github.com/fatedier/frp/pkg/config"
-	v1 "github.com/fatedier/frp/pkg/config/v1"
-	"github.com/fatedier/frp/pkg/config/v1/validation"
+	"github.com/shuffleman/frp/pkg/config"
+	v1 "github.com/shuffleman/frp/pkg/config/v1"
+	"github.com/shuffleman/frp/pkg/config/v1/validation"
 )
 
 var proxyTypes = []v1.ProxyType{
@@ -85,7 +85,7 @@ func NewProxyCommand(name string, c v1.ProxyConfigurer, clientCfg *v1.ClientComm
 				fmt.Println(err)
 				os.Exit(1)
 			}
-			err := startService(clientCfg, []v1.ProxyConfigurer{c}, nil, "")
+			_, err := startService(clientCfg, []v1.ProxyConfigurer{c}, nil, "")
 			if err != nil {
 				fmt.Println(err)
 				os.Exit(1)
@@ -111,7 +111,7 @@ func NewVisitorCommand(name string, c v1.VisitorConfigurer, clientCfg *v1.Client
 				fmt.Println(err)
 				os.Exit(1)
 			}
-			err := startService(clientCfg, nil, []v1.VisitorConfigurer{c}, "")
+			_, err := startService(clientCfg, nil, []v1.VisitorConfigurer{c}, "")
 			if err != nil {
 				fmt.Println(err)
 				os.Exit(1)

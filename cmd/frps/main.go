@@ -17,8 +17,8 @@ package main
 import (
 	"github.com/fatedier/golib/crypto"
 
-	_ "github.com/fatedier/frp/assets/frps"
-	_ "github.com/fatedier/frp/pkg/metrics"
+	_ "github.com/shuffleman/frp/assets/frps"
+	_ "github.com/shuffleman/frp/pkg/metrics"
 )
 
 func main() {

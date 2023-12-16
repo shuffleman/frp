@@ -28,10 +28,10 @@ import (
 	"github.com/samber/lo"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/fatedier/frp/pkg/msg"
-	"github.com/fatedier/frp/pkg/transport"
-	"github.com/fatedier/frp/pkg/util/log"
-	"github.com/fatedier/frp/pkg/util/util"
+	"github.com/shuffleman/frp/pkg/msg"
+	"github.com/shuffleman/frp/pkg/transport"
+	"github.com/shuffleman/frp/pkg/util/log"
+	"github.com/shuffleman/frp/pkg/util/util"
 )
 
 // NatHoleTimeout seconds.
