@@ -134,7 +134,7 @@ func RunClient(cfgFilePath string) (*client.Service, error) {
 	return startService(cfg, proxyCfgs, visitorCfgs, cfgFilePath)
 }
 
-func startService(
+func StartService(
 	cfg *v1.ClientCommonConfig,
 	proxyCfgs []v1.ProxyConfigurer,
 	visitorCfgs []v1.VisitorConfigurer,
@@ -171,7 +171,7 @@ func startService(
 	return svr, nil
 }
 
-func StartService(
+func startService(
 	cfg *v1.ClientCommonConfig,
 	proxyCfgs []v1.ProxyConfigurer,
 	visitorCfgs []v1.VisitorConfigurer,
