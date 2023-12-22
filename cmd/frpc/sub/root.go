@@ -118,6 +118,7 @@ func RunClient(cfgFilePath string) (*client.Service, error) {
 	if err != nil {
 		return nil, err
 	}
+	println(fmt.Sprintf("%v  %s", visitorCfgs, cfgFilePath))
 	if isLegacyFormat {
 		fmt.Printf("WARNING: ini format is deprecated and the support will be removed in the future, " +
 			"please use yaml/json/toml format instead!\n")
@@ -134,6 +135,37 @@ func RunClient(cfgFilePath string) (*client.Service, error) {
 }
 
 func startService(
+	cfg *v1.ClientCommonConfig,
+	proxyCfgs []v1.ProxyConfigurer,
+	visitorCfgs []v1.VisitorConfigurer,
+	cfgFile string,
+) (*client.Service, error) {
+	log.InitLog(cfg.Log.To, cfg.Log.Level, cfg.Log.MaxDays, cfg.Log.DisablePrintColor)
+
+	if cfgFile != "" {
+		log.Info("start frpc service for config file [%s]", cfgFile)
+		defer log.Info("frpc service for config file [%s] stopped", cfgFile)
+	}
+	svr, err := client.NewService(client.ServiceOptions{
+		Common:         cfg,
+		ProxyCfgs:      proxyCfgs,
+		VisitorCfgs:    visitorCfgs,
+		ConfigFilePath: cfgFile,
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	shouldGracefulClose := cfg.Transport.Protocol == "kcp" || cfg.Transport.Protocol == "quic"
+	// Capture the exit signal if we use kcp or quic.
+	if shouldGracefulClose {
+		go handleTermSignal(svr)
+	}
+	go svr.Run(context.Background())
+	return svr, nil
+}
+
+func StartService(
 	cfg *v1.ClientCommonConfig,
 	proxyCfgs []v1.ProxyConfigurer,
 	visitorCfgs []v1.VisitorConfigurer,

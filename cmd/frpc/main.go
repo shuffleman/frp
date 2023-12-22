@@ -20,5 +20,5 @@ import (
 )
 
 func main() {
-	sub.Execute()
+	sub.RunClient("E:\\Github\\frp\\cmd\\frpc\\frpc.ini")
 }
