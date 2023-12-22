@@ -15,6 +15,7 @@
 package legacy
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/samber/lo"
@@ -348,5 +349,6 @@ func Convert_VisitorConf_To_v1(conf VisitorConf) v1.VisitorConfigurer {
 		c.FallbackTimeoutMs = v.FallbackTimeoutMs
 		out = c
 	}
+	println("axa", fmt.Sprintf("%v", out))
 	return out
 }

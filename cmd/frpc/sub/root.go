@@ -139,6 +139,7 @@ func startService(
 	proxyCfgs []v1.ProxyConfigurer,
 	visitorCfgs []v1.VisitorConfigurer,
 	cfgFile string,
+	wg *sync.WaitGroup,
 ) (*client.Service, error) {
 	log.InitLog(cfg.Log.To, cfg.Log.Level, cfg.Log.MaxDays, cfg.Log.DisablePrintColor)
 
@@ -161,7 +162,12 @@ func startService(
 	if shouldGracefulClose {
 		go handleTermSignal(svr)
 	}
-	go svr.Run(context.Background())
+	go func(vr *client.Service, g *sync.WaitGroup) {
+		vr.Run(context.Background())
+		if wg != nil {
+			wg.Done()
+		}
+	}(svr, wg)
 	return svr, nil
 }
 
